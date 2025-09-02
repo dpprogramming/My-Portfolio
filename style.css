@@ -706,12 +706,11 @@ nav{
 
 
 
-
 /* ===== FOOTER STYLES ===== */
 footer {
     width: 100%;
     background: linear-gradient(to right, rgb(white), rgb(254,215,173));
-    padding: 50px 20px 30px;
+    padding:  20px; /* আগে 50px 20px 30px */
 }
 
 .footer-wrapper {
@@ -723,10 +722,10 @@ footer {
     width: 100%;
     max-width: 1400px;
     background: rgb(254,215,173);
-    padding: 30px;
+    padding: 20px; /* আগে 30px */
     border-radius: 22px;
     position: relative;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* আগে 0 12px 30px */
 }
 
 .footer-card::after {
@@ -734,10 +733,10 @@ footer {
     position: absolute;
     left: 8px;
     right: 8px;
-    bottom: -20px;
-    height: 30px;
+    bottom: -15px; /* আগে -20px */
+    height: 20px;  /* আগে 30px */
     background: rgba(109,67,0,0.18);
-    filter: blur(18px);
+    filter: blur(15px); /* আগে 18px */
     border-radius: 16px;
     z-index: -2;
 }
@@ -745,35 +744,35 @@ footer {
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-    margin-bottom: 20px;
+    gap: 20px; /* আগে 28px */
+    margin-bottom: 15px; /* আগে 20px */
 }
 
 .footer-column h3 {
     color: rgb(109,67,0);
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* আগে 12px */
     font-size: clamp(1.05rem, 1.05rem + 1.5vw, 1.3rem);
 }
 
 .footer-column p, .footer-column a {
     color: #333;
     font-size: clamp(0.85rem, 0.6rem + 1.6vw, 1rem);
-    line-height: 1.5;
+    line-height: 1.4; /* আগে 1.5 */
     text-decoration: none;
 }
 
 .footer-social-links {
     display: flex;
-    gap: 12px;
-    margin-top: 8px;
+    gap: 10px; /* আগে 12px */
+    margin-top: 6px; /* আগে 8px */
 }
 
 .footer-social-links a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 42px;
-    height: 42px;
+    width: 38px; /* আগে 42px */
+    height: 38px; /* আগে 42px */
     border-radius: 50%;
     border: 2px solid rgb(109,67,0);
     color: rgb(109,67,0);
@@ -784,20 +783,20 @@ footer {
     transform: scale(1.15);
     background-color: rgb(109,67,0);
     color: white;
-    box-shadow: 0 6px 20px rgba(109,67,0,0.22);
+    box-shadow: 0 5px 15px rgba(109,67,0,0.22); /* আগে 0 6px 20px */
 }
 
 .footer-bottom {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* আগে 0.9rem */
     color: #444;
     border-top: 1px solid rgba(109,67,0,0.15);
-    padding-top: 10px;
+    padding-top: 8px; /* আগে 10px */
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-    .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
 }
 
 @media (max-width: 884px) {
@@ -806,6 +805,16 @@ footer {
 }
 
 @media (max-width: 420px) {
-    .footer-card { padding: 20px; }
-    .footer-column h3 { font-size: 1.05rem; }
+    .footer-card { padding: 15px; }
+    .footer-column h3 { font-size: 1rem; }
+}
+
+/* Blogs Section Title */
+#blogs p {
+    text-align: center;       /* সেন্টারে রাখা */
+    font-weight: 700;         /* বোল্ড / মোটা */
+    font-size: 28px;          /* বড় ফন্ট সাইজ */
+    margin-bottom: 30px;      /* নিচে কিছু স্পেস */
+    color: black;           /* optional কালার */
+    font-family: 'Georgia', serif; /* classic look */
 }
