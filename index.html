@@ -1,251 +1,342 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Debjit Portfolio</title>
 
-    <meta charset="UTF-8">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- AOS (optional animation lib) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
-    <title>Debjit Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Debjit</span>
+      </div>
 
-    <nav>
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Skills</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">Services</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#">Blogs</a></div>
+        <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#">Contact Us</a></div>
+      </div>
 
-        <div class="nav-container">
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
 
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="dropdown">
+      <div class="links">
+        <a href="#Home">Home</a>
+        <a href="#About Me">About</a>
+        <a href="#Skill's">Skills</a>
+        <a href="#Service's">Services</a>
+        <a href="#Blog's">Blogs</a>
+        <a href="#Contact Me">Contact Us</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
 
-                <span>Debjit</span>
+  <!-- HERO SECTION -->
+  <section>
+    <div class="hero-wrapper">
+      <!-- hero-card = the rounded box (with colored deep shadow under it) -->
+      <div class="hero-card" data-aos="zoom-in" data-aos-duration="900">
+        <!-- hero-box keeps the 16:9 aspect and grid columns inside the card -->
+        <div class="hero-box">
+          <div class="image" data-aos="zoom-in-right" data-aos-duration="1200" data-aos-delay="200">
+            <!-- replace debjit.png with your image file -->
+            <img src="debjit.png" alt="Debjit" />
+          </div>
 
+          <div class="content">
+            <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">Hey I'm <span>Debjit</span></h1>
+
+            <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+              I'm a <span id="typing"></span>
             </div>
 
-            <div class="links">
+            <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500" class="lead">
+              Welcome to my portfolio! This is a space where creativity meets learning.
+              I explore technology, design and AI — turning curiosity into real creations.
+            </p>
 
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
-
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#">About</a></div>
-
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Skills</a></div>
-
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">Services</a></div>
-
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#">Blogs</a></div>
-
-                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#">Contact Us</a></div>
-
+            <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="600">
+              <a href="https://github.com/dpprogramming" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.facebook.com/share/1CUF5iTTvU/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
 
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="700">
+              
+            </div>
+          </div>
+        </div> <!-- /.hero-box -->
+      </div> <!-- /.hero-card -->
+    </div> <!-- /.hero-wrapper -->
+  </section>
 
+  <!-- AOS script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+
+  <!-- Hamburger / Dropdown -->
+  <script>
+    function hamburg(){
+      const navbar = document.querySelector(".dropdown");
+      navbar.style.transform = "translateY(0px)";
+    }
+    function cancel(){
+      const navbar = document.querySelector(".dropdown");
+      navbar.style.transform = "translateY(-500px)";
+    }
+  </script>
+
+  <!-- Typewriter -->
+  <script>
+    const texts = ["Learner", "Creator", "Dreamer", "Explorer" ,"Designer" ,"Artist" ,"YouTube" ,"Developer"];
+    let count = 0, index = 0, currentText = "", letter = "";
+    (function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById("typing").textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+      } else {
+        setTimeout(type, 120);
+      }
+    })();
+  </script>
+  
+  
+  <!-- ===== HOME SECTION ===== -->
+<section id="home">
+  <p>Home</p>
+    <!-- Hero content থাকবে এখানে -->
+</section>
+
+<!-- ===== BLOGS SECTION ===== -->
+<section id="blogs">
+  <p>Blog's</p>
+    <!-- Blogs content এখানে লিখবে -->
+</section>
+
+
+
+<!-- ===== SKILL SECTION ===== -->
+<section id="skills">
+  <div class="skills-wrapper">
+    <h2 data-aos="fade-down">My Skills</h2>
+    <div class="skills-container">
+      <!-- Skill 1 -->
+      <div class="skill" data-aos="fade-right" data-aos-delay="100">
+        <p>HTML</p>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="90%"></div>
         </div>
-
-        <div class="dropdown">
-
-            <div class="links">
-
-                <a href="">Home</a>
-
-                <a href="">About</a>
-
-                <a href="">Skills</a>
-
-                <a href="">Services</a>
-
-                <a href="">Blogs</a>
-
-                <a href="">Contact Us</a>
-
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-
-            </div>
-
+      </div>
+      <!-- Skill 2 -->
+      <div class="skill" data-aos="fade-right" data-aos-delay="200">
+        <p>CSS</p>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="85%"></div>
         </div>
+      </div>
+      <!-- Skill 3 -->
+      <div class="skill" data-aos="fade-right" data-aos-delay="300">
+        <p>JavaScript</p>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="75%"></div>
+        </div>
+      </div>
+      <!-- Skill 4 -->
+      <div class="skill" data-aos="fade-right" data-aos-delay="400">
+        <p>Python</p>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="80%"></div>
+        </div>
+      </div>
+      <!-- Skill 5 -->
+      <div class="skill" data-aos="fade-right" data-aos-delay="500">
+        <p>UI/UX Design</p>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="70%"></div>
+        </div>
+      </div>
+    </div>
+  </div><script>
+document.addEventListener("DOMContentLoaded", function() {
+    const skillFills = document.querySelectorAll(".skill-fill");
 
-    </nav>
-
-        <section>
-
-            <div class="main-container">
-
-                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
-
-                    <img src="debjit.png" alt="">
-
-                </div>
-
-                <div class="content">
-
-                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Debjit</span></h1>
-
-         <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
-
-  I'm a <span id="typing"></span>
-
-</div>
-
-
-
-<style>
-
-  .typewriter {
-
-    font-size: 28px;
-
-    font-weight: 500;
-
-  }
-
-
-
-  .typewriter span {
-
-    font-weight: bold;
-
-    
-
-    color: rgb(109,67, 0);
-
-    text-shadow: 0 0 10px rgb(109,67, 0); /* আলাদা কালার (লালচে) */
-
-    border-right: 2px solid #e63946;
-
-    padding-right: 5px;
-
-    animation: blink 0.7s infinite;
-
-  }
-
-
-
-  @keyframes blink {
-
-    0% { border-color: transparent; }
-
-    50% { border-color: #e63946; }
-
-    100% { border-color: transparent; }
-
-  }
-
-</style>
-
-
-
-<script>
-
-  const texts = ["Learner", "Creator", "Dreamer", "Explorer"]; // এখানে চাইলে শব্দ বদলাও
-
-  let count = 0;
-
-  let index = 0;
-
-  let currentText = "";
-
-  let letter = "";
-
-
-
-  (function type() {
-
-    if (count === texts.length) {
-
-      count = 0;
-
+    function fillSkills() {
+        skillFills.forEach(skill => {
+            const fillValue = skill.getAttribute("data-fill");
+            skill.style.width = fillValue;
+        });
     }
 
-    currentText = texts[count];
+    // Trigger when the section scrolls into view
+    const skillsSection = document.getElementById("skills");
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                fillSkills();
+                observer.disconnect(); // run only once
+            }
+        });
+    }, { threshold: 0.5 });
 
-    letter = currentText.slice(0, ++index);
-
-
-
-    document.getElementById("typing").textContent = letter;
-
-
-
-    if (letter.length === currentText.length) {
-
-      count++;
-
-      index = 0;
-
-      setTimeout(type, 1500); // শব্দ লেখার পর বিরতি
-
-    } else {
-
-      setTimeout(type, 120); // টাইপিং স্পিড
-
-    }
-
-  })();
-
+    observer.observe(skillsSection);
+});
 </script>
+</section>
 
-                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Welcome to my portfolio! This is a space where creativity meets learning. I am on a journey of exploring technology, design, and digital innovation. Here you’ll find my works, experiments, and ideas that reflect my growth as a learner and a creator. Every project is a step forward in turning curiosity into real creations.</p>
+<!-- ===== SERVICES SECTION ===== -->
+<section id="services">
+  <div class="services-wrapper">
+    <h2 data-aos="fade-down">My Services</h2>
+    <div class="services-container">
+      <!-- Service 1 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Building responsive and modern websites using HTML, CSS, and JavaScript.</p>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-paint-brush"></i>
+        <h3>UI/UX Design</h3>
+        <p>Creating user-friendly interfaces and beautiful web/app designs.</p>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <h3>App Development</h3>
+        <p>Developing mobile apps with Flutter and modern technologies.</p>
+      </div>
+      <!-- Service 4 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fa-solid fa-robot"></i>
+        <h3>AI & Automation</h3>
+        <p>Creating smart AI systems and automating tasks for efficiency.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+  
 
-                        <a href="#" ><i class="fa-brands fa-github"></i></a>
-
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-
-                    </div>
-
-                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-
-                        <button>Download CV</button>
-
-                    </div>
-
-                </div>
-
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about">
+  <div class="about-wrapper">
+    <div class="about-card">
+      <div class="about-box">
+        <!-- Left: Image -->
+        <div class="about-image" data-aos="fade-right">
+        </div>
+        <!-- Right: Content -->
+        <div class="about-content" data-aos="fade-left">
+          <h2>About Me</h2>
+          <p class="about-lead">
+            I am Debjit, a passionate learner and creator exploring technology, digital design, and innovation.
+            My journey is about turning ideas into real projects and constantly learning new skills.
+          </p>
+          <p class="about-details">
+            I love experimenting with new technologies, creating engaging designs, and building digital solutions
+            that make an impact. Every project I undertake helps me grow and push boundaries.
+          </p>
+          <div class="about-btn">
+            <button>Know More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  
+  <!-- ===== CONTACT SECTION ===== -->
+<section id="contact">
+    <div class="contact-wrapper">
+        <form action="https://formspree.io/f/xandoqel" method="POST" class="contact-form">
+            <h2>Contact Me</h2>
+            <p class="contact-note">
+    Please fill in your name, email, and message, then click "Submit". I will get back to you as soon as possible!
+</p>
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
             </div>
-
-        </section>
-
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-        <script>
-
-          AOS.init({offset:0});
-
-        </script>
-
-        <script>
-
-            function hamburg(){
-
-                const navbar = document.querySelector(".dropdown")
-
-                navbar.style.transform = "translateY(0px)"
-
-            }
-
-            function cancel(){
-
-                const navbar = document.querySelector(".dropdown")
-
-                navbar.style.transform = "translateY(-500px)"
-
-            }
-
-        </script>
-
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+  
+  
+  <!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-card">
+      <div class="footer-grid">
+        <!-- Column 1: Short intro -->
+        <div class="footer-column">
+          <h3>About Me</h3>
+          <p>Exploring creativity, learning, and digital innovation. Follow my journey through tech and design.</p>
+        </div>
+        
+        <!-- Column 2: Email -->
+        <div class="footer-column">
+          <h3>Email</h3>
+          <p><a href="mailto:debjitbagdi35@gmail.com">debjitbagdi35@gmail.com</a></p>
+        </div>
+        
+        <!-- Column 3: Social Links -->
+        <div class="footer-column">
+          <h3>Follow Me</h3>
+          <div class="footer-social-links">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 4: Optional Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">About</a></p>
+          <p><a href="#">Skills</a></p>
+          <p><a href="#">Services</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Debjit Boss. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
-
-                  </html>
+</html>
